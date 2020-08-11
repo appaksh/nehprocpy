@@ -1,0 +1,4 @@
+name=Agastya, favoriteGame=basketBall, grade=6, city=Austin
+name=Chaitra, favoriteGame=basketBall, grade=6, city=Austin
+name=Aakash, favoriteGame=basketBall, grade=6, city=Austin
+name=Kaushik, favoriteGame=basketBall, grade=8, city=Charlotte
