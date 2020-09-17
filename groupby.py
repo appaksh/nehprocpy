@@ -17,12 +17,14 @@ from itertools import groupby
 #     ranksDict[rank] += 1
 #
 # print(ranksDict)
-
-items = [('ak', 1), ('aa', 1), ('ka', 2), ('ts', 2), ('sc', 2), ('as', 3), ('sa', 3), ('ab', 3), ('va', 3)]
-lambdaFunc = lambda x: x[1]
-
-print(*[(key, len(list(value))) for key, value in groupby(items, lambdaFunc)])
-
+#
+# items = [('ak', 1), ('aa', 1), ('ka', 2), ('ts', 2), ('sc', 2), ('as', 3), ('sa', 3), ('ab', 3), ('va', 3)]
+# lambdaFunc = lambda x: x[1]
+#
+# print(*[(key, len(list(value))) for key, value in groupby(items, lambdaFunc)])
+#
 data = "11222334444"
-dl = list(data)
-print(*[(len(list(value)), key) for key, value in groupby(dl, lambda x: int(x))])
+dls = list(data)
+dli = list(map(int, dls))
+print(dli)
+print(*[(len(list(value)), key) for key, value in groupby(dli, lambda x: x)])
