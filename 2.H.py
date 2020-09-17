@@ -1,3 +1,7 @@
+# https://www.hackerrank.com/challenges/list-comprehensions/submissions/code/171762875
+
+
+
 # (x, y, z) = [1, 1, 2]
 # n = 3
 #
@@ -10,6 +14,12 @@
 # print(var)
 #
 #
+
+
+
+
+
+
 # def bubbleSort(myList):
 #     lengthOfList = len(myList)
 #

@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/swap-case/copy-from/168257906
+
 # print("Hello, World! ")
 # def swapCase(data):
 #     return data.swapcase()
@@ -11,7 +13,9 @@
 # word = input("Write any letter(s): ")
 # result = swapCase(word)
 # print(result)
-#
+
+
+#https://www.hackerrank.com/challenges/py-if-else/problem
 # import math
 # import os
 # import random
@@ -30,7 +34,9 @@
 #         print("Weird ")
 #     else:
 #         print("Not Weird ")
-#
+
+
+# https://www.hackerrank.com/challenges/whats-your-name/problem
 #
 # def print_full_name(a, b):
 #     print("Hello {firstName} {lastName}! You just delved into python.".format(firstName=a, lastName=b))
@@ -54,7 +60,10 @@
 #     result = split_and_join(line)
 #     print(result)
 #
-#
+
+
+
+#https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
 # def runnerUp(myArr):
 #     newList = []
 #     counter = 0
@@ -104,6 +113,11 @@
 #
 # print(f"runnerup() -  The runner up score is: {functionVariable} ")
 # print(f"runnerup2() - The runner up score is: {funcVar} ")
+
+
+
+# https://www.hackerrank.com/challenges/python-lists/submissions/code/170501726
+#
 # if __name__ == '__main__':
 #     dataList = []
 #     N = int(input("How many command(s) do you want: "))

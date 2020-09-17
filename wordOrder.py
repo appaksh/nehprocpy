@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/word-order/problem
+
 # wordDict = defaultdict(int)
 # wordCount = int(input())
 # for myNumber in wordCount:
@@ -13,7 +15,8 @@ from collections import defaultdict
 
 wordDict = defaultdict(int)
 wordCount = int(input())
-for myNumber in range(wordCount):
+x = range(wordCount)
+for myNumber in x:
     myString = input()
     wordDict[myString] += 1
 
