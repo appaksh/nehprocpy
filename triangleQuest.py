@@ -1,7 +1,2 @@
-mi = list(map(int, input()))
-count = 1
-
-for x in range(mi):
-    mni = mi[count]
-    count += 1
-    print(x)
+for i in range(1, int(input())):
+    print(int(((10 ** i) // 9) * i))
