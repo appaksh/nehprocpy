@@ -21,3 +21,13 @@ def print_rangoli(size):
 if __name__ == '__main__':
     n = int(input())
     print_rangoli(n)
+
+# # e
+# # e-d-e
+# # e-d-c-d-e
+# #
+# # [e]
+# # [e, d, e]
+# # [e, d, c, d, e]
+#
+# arr = ['e', 'd', 'c', 'd', 'e']
