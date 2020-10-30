@@ -10,24 +10,19 @@
 # --c-b-c--
 # ----c----
 
+import string
+
+alphaArr = list(string.ascii_lowercase)
+
 
 def print_rangoli(size):
-    myString = "abcdefghijklmnopqrstuvwxyz"
-    for i in range(size - 1, -size, -1):
-        finalString = '-'.join(myString[size - 1:abs(i): - 1] + myString[abs(i):size])
-        print(finalString.center(4 * size - 3, '-'))
+    for i in range(size - 1, 0, - 1):
+        print(("-".join(alphaArr[i: size][:: - 1] + alphaArr[i + 1: size])).center((4 * size) - 3, "-"))
+
+    for i in range(size):
+        print(("-".join(alphaArr[i: size][:: - 1] + alphaArr[i + 1: size])).center((4 * size) - 3, "-"))
 
 
 if __name__ == '__main__':
     n = int(input())
     print_rangoli(n)
-
-# # e
-# # e-d-e
-# # e-d-c-d-e
-# #
-# # [e]
-# # [e, d, e]
-# # [e, d, c, d, e]
-#
-# arr = ['e', 'd', 'c', 'd', 'e']
