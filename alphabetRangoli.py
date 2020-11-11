@@ -16,10 +16,10 @@ alphaArr = list(string.ascii_lowercase)
 
 
 def print_rangoli(size):
-    for i in range(size - 1, 0, - 1):
+    for i in range(size - 1, 0, -1):
         print(("-".join(alphaArr[i: size][:: - 1] + alphaArr[i + 1: size])).center((4 * size) - 3, "-"))
 
-    for i in range(size):
+    for i in range(1, size):
         print(("-".join(alphaArr[i: size][:: - 1] + alphaArr[i + 1: size])).center((4 * size) - 3, "-"))
 
 
