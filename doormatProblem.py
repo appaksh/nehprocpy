@@ -12,7 +12,7 @@
 #  6   ------.|..|..|.------git
 #  7   ---------.|.---------
 # ...
-  
+
 di = list(map(int, input().split()))
 rows = di[0]
 columns = di[1]
