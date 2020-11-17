@@ -6,7 +6,7 @@ def minion_game(s):
     for i in range(len(s)):
         if s[i] in vowels:
             kevsc += (len(s) - i)
-        else:\\
+        else:
             stusc += (len(s) - i)
 
     if kevsc > stusc:
