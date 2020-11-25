@@ -1,0 +1,1 @@
+if __name__ == '__main__':    a = int(input())    b = int(input())    f = f"{a + b} \n{a - b} \n{a * b} "    print(f)
