@@ -1,1 +1,1 @@
-if __name__ == '__main__':    a = int(input())    b = int(input())    f = f"{a + b} \n{a - b} \n{a * b} "    print(f)
+# https://www.hackerrank.com/challenges/python-arithmetic-operators/problem#Output Format## Print the three lines as explained above.## Sample Input 0## 3# 2# Sample Output 0## 5# 1# 6if __name__ == '__main__':    a = int(input())    b = int(input())    f = f"{a + b} \n{a - b} \n{a * b} "    print(f)
