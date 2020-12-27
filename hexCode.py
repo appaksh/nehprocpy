@@ -1,5 +1,6 @@
-def isValidHexCode(hexCode):
-    return "Valid"
+import re
 
-
-print("\n".join([isValidHexCode(int(input())) for myNumbers in range(int(input())) if True]))
+for myInput in range(int(input())):
+    myValidMatches = re.findall(r':?.(#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3})', input())
+    if myValidMatches:
+        print("\n".join(myValidMatches))
