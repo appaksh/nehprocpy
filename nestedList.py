@@ -27,4 +27,3 @@ for n in range(int(input())):
 secondLowest = sorted(list(set(score for (name, score) in myList)))[1]
 
 print("\n".join(sorted(list(name for (name, score) in myList if score == secondLowest))))
-
