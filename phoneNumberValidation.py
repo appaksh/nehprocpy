@@ -8,4 +8,4 @@ def isValidPhoneNumber(phoneNumber):
         return "NO"
 
 
-print("\n".join([isValidPhoneNumber(str(input())) for myNumbers in range(int(input()))]))
+print("\n".join([isValidPhoneNumber(input()) for myNumbers in range(int(input()))]))
