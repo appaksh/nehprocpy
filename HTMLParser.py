@@ -1,0 +1,1 @@
+import remyData = input()pattern = re.compile("<(.+^>)>")match = pattern.search(myData)while match:    print(f"Start tag {match.group(1)})")    match = pattern.search(myData, match.start() + 1)
