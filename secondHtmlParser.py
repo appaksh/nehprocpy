@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/html-parser-part-2/problem
+# https://www.hackerrank.com/challenges/html-parser-part-2/problem
 
 from abc import ABC
 from html.parser import HTMLParser
@@ -20,11 +20,7 @@ class MyHTMLParser(HTMLParser, ABC):
             print(data)
 
 
-html = ""
-for i in range(int(input())):
-    html += input().rstrip()
-    html += '\n'
-
+html = '\n'.join([input() for _ in range(int(input()))])
 parser = MyHTMLParser()
 parser.feed(html)
 parser.close()

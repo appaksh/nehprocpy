@@ -16,6 +16,7 @@ class MyHTMLParser(HTMLParser, ABC):
         [print(f"-> {attr[0]} > {attr[1]}") for attr in attrs]
 
 
+html = '\n'.join([input() for _ in range(int(input()))])
 parser = MyHTMLParser()
-for _ in range(int(input())):
-    parser.feed(input())
+parser.feed(html)
+parser.close()
