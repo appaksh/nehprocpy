@@ -8,7 +8,7 @@ def speedFilter(allCars, filterValue):
 
 def printCarInfo(cars, filterFunc, filterValue):
     filteredCars = filterFunc(cars, filterValue)
-    print(*[f"Car {car[0].capitalize()} {car[1].upper()} is {car[2].capitalize()}\n" for car in filteredCars])
+    print("\n".join([f"Car {car[0].capitalize()} {car[1].upper()} is {car[2].capitalize()}" for car in filteredCars]))
 
 
 myCars = [
