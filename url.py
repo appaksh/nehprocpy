@@ -17,16 +17,8 @@ def getPath(pattern):
     return pattern.group(4) or ""
 
 
-defaultDictPort = {
-    "http": "80",
-    "https": "443",
-    "ftp": "21",
-    "sftp": "22"
-}
-
-
 def parseUrl(url):
-    patternText = r'(\w+)://([\w.]+):?(\d+)*(/.*)'
+    patternText = r'(\w+)://([\w.]+.+):?(\d+)*(/.*)'
     return re.match(patternText, url.lower())
 
 
@@ -45,10 +37,15 @@ def compareUrls(url1, url2):
     url2Parts = [getScheme(pattern2), getDomain(pattern2), getPort(pattern2), getPath(pattern2)]
 
     if url1Parts == url2Parts:
-        return True
-    else:
-        return False
+        return True or False
 
+
+defaultDictPort = {
+    "http": "80",
+    "https": "443",
+    "ftp": "21",
+    "sftp": "22"
+}
 
 urls = input("Enter urls: ").split(";")
 print("urls equal : ", compareUrls(urls[0].strip(), urls[1].strip()))
