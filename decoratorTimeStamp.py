@@ -1,4 +1,5 @@
 import time
+import urllib.request
 
 
 def trackingOverallTime(functionToBeDecorated):
@@ -9,15 +10,19 @@ def trackingOverallTime(functionToBeDecorated):
         startTime = int(time.time() * 1000)
         functionToBeDecorated()
         endTime = int(time.time() * 1000)
-        print(f"Tracking function: {functionToBeDecorated.__name__}, start and end time: {endTime - startTime} milliseconds")
+        print(
+            f"Tracking function: {functionToBeDecorated.__name__}, overall time: {endTime - startTime} milliseconds")
 
     return timeTracker
 
 
 @trackingOverallTime
 def printTimeFuncDecorated():
-    print("And end")
-    time.sleep(1)
+    url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast/hourly"
+    file = urllib.request.urlopen(url)
+    print("Result code: " + str(file.getcode()))
 
+
+time.sleep(1)
 
 printTimeFuncDecorated()
