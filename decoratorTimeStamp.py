@@ -1,7 +1,7 @@
 import json
-
 import time
 import urllib.request
+from datetime import datetime
 
 
 def trackingOverallTime(functionToBeDecorated):
@@ -9,7 +9,7 @@ def trackingOverallTime(functionToBeDecorated):
         startTime = int(time.time() * 1000)
         data = functionToBeDecorated(*args)
         endTime = int(time.time() * 1000)
-        print(f"Tracking function: {functionToBeDecorated.__name__}, overall time: {endTime - startTime} milliseconds ")
+        print(f'Tracking function: {functionToBeDecorated.__name__}, overall time: {endTime - startTime} milliseconds ')
         return data
 
     return timeTracker
@@ -23,11 +23,17 @@ def getWeatherData():
     return data
 
 
+def getHourFromDate(date):
+    dateObject = datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%z")
+    return str(dateObject.hour).rjust(2, "0") + ":" + str(dateObject.minute).rjust(2, "0")
+
+
 @trackingOverallTime
 def parseWeatherData(data):
     jsonWeather = json.loads(data)
     periods = jsonWeather["properties"]["periods"]
-    [print(f'{period["startTime"][11:16]} {period["temperature"]}{period["temperatureUnit"]} ') for period in periods]
+    [print(f'{getHourFromDate(period["startTime"])} {period["temperature"]}{period["temperatureUnit"]} ') for period in
+     periods]
 
 
 weather = getWeatherData()
