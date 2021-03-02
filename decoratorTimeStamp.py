@@ -27,6 +27,8 @@ def getHourFromDate(date):
     dateObject = datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%z")
     return str(dateObject.hour).rjust(2, "0") + ":" + str(dateObject.minute).rjust(2, "0")
 
+def getHourFromDateWithStringParsing(date):
+    return date[11:16]
 
 @trackingOverallTime
 def parseWeatherData(data):
