@@ -1,43 +1,33 @@
-import urllib.request
+def getStudentOfTheDay():
+    return {
+        "firstName": "Aakash",
+        "lastName": "Appalaneni",
+        "studentGrade": "6"
+    }
 
 
-def getNames1(functionToBeDecorated):
-    def names(*args):
-        firstName = "Aakash"
-        lastName = "Appalaneni"
-        studentGrade = "6"
-        data = functionToBeDecorated(*args)
+def printStudentInfo(functionToBeDecorated):
+    def studentDecoratorOther(*args):
+        student = functionToBeDecorated(*args)
         print(
-            f'Tracking function: {functionToBeDecorated.__name__}, first name: {firstName}, first name: {lastName} grade: {studentGrade} ')
-        return data
+            f'First name: {student["firstName"]}, last name = {student["lastName"]}, student grade: {student["studentGrade"]} ')
+        return student
 
-    return names
+    return studentDecoratorOther
 
 
-def getNames2(functionToBeDecorated):
-    def names(*args):
-        lastName = "Appalaneni"
-        firstName = "Aakash"
-        studentGrade = "6"
-        data = functionToBeDecorated(*args)
+def printStudentInfoOther(functionToBeDecorated):
+    def studentDecorator(*args):
+        student = functionToBeDecorated(*args)
         print(
-            f'Tracking function: {functionToBeDecorated.__name__}, last name: {lastName}, first name: {firstName} grade: {studentGrade} ')
-        return data
+            f'Last name: {student["lastName"]}, first name = {student["firstName"]}, student grade: {student["studentGrade"]} ')
+        return student
 
-    return names
-
-
-# @trackingOverallTime
-def getWeatherData(inputUrl):
-    handle = urllib.request.urlopen(inputUrl)
-    data = handle.read().decode()
-    return data
+    return studentDecorator
 
 
-url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast/hourly"
-# weather = getWeatherData(url)
-decoratorStartAndEndTime = getNames2(getWeatherData)
-decoratorStartAndEndTime(url)
-print("---------------------------------------------------------------------------------------------------------------")
-finalTimeTaken = getNames1(getWeatherData)
-finalTimeTaken(url)
+decoratorStudentInfo = printStudentInfo(getStudentOfTheDay)
+decoratorStudentInfo()
+print("--------------------------------------------------------------------------------------------------------------")
+decoratorStudentInfoOther = printStudentInfoOther(getStudentOfTheDay)
+decoratorStudentInfoOther()
