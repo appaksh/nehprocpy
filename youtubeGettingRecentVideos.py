@@ -3,14 +3,19 @@ import os
 import urllib.request
 from urllib.error import HTTPError
 
-apiKey = os.getenv('YOUTUBE_APIKEY')
+from decouple import config
+
+YOUTUBE_APIKEY = 'YOUTUBE_APIKEY'
+YT_ETAG = 'YT_ETAG'
+
+apiKey = os.getenv(YOUTUBE_APIKEY)
 part = "snippet"
 
 
 def getRecentVideoId(channelId):
     url = f'https://www.googleapis.com/youtube/v3/search?part={part}&channelId={channelId}&maxResults=10&order=date&type=video&key={apiKey}'
     idList = []
-    etagInput = input("Enter etag: ")
+    etagInput = config(YT_ETAG) or ''
     hdr = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)',
         'If-None-Match': etagInput
@@ -21,8 +26,8 @@ def getRecentVideoId(channelId):
         data = response.read().decode()
         respData = json.loads(data)
         items = respData["items"]
-        etag = respData["etag"]
-        print("New etag is: ", etag)
+        os.environ[YT_ETAG] = respData["etag"]
+        print("New etag is: ", etagInput)
         for item in items:
             videoId = item["id"]["videoId"]
             idList.append(videoId)

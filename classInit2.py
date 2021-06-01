@@ -1,0 +1,1 @@
+class Songs:    lyrics = " "    def __init__(self, lyrics=" "):        self.lyrics = lyrics    def printSongInfo(self):        print("The lyrics are, ", vars(self))singMeASong = Songs("May god bless you, have a sunshine on you, happy birthday to you ! ")singMeASong.printSongInfo()
