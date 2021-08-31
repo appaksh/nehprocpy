@@ -52,7 +52,7 @@ def trackStartAndEndTime(functionToBeDecorated):
     return timeTracker
 
 
-# @trackingOverallTime
+@trackingOverallTime
 def getWeatherData(inputUrl):
     handle = urllib.request.urlopen(inputUrl)
     data = handle.read().decode()

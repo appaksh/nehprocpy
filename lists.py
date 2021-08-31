@@ -1,8 +1,8 @@
 if __name__ == '__main__':
     dataList = []
-    N = int(input())
+    inputLine = int(input())
 
-    for x in range(N):
+    for x in range(inputLine):
         commandStart = list(input().split(" "))
         commandWords = commandStart[0]
 
@@ -14,38 +14,38 @@ if __name__ == '__main__':
             except ValueError:
                 continue
 
-        if commandWords == "print":
+        elif commandWords == "print":
             print(dataList)
 
-        if commandWords == "remove":
+        elif commandWords == "remove":
             value = int(commandStart[1])
             try:
                 dataList.remove(value)
             except ValueError:
                 continue
 
-        if commandWords == "append":
+        elif commandWords == "append":
             value = int(commandStart[1])
             try:
                 dataList.append(value)
             except ValueError:
                 continue
 
-        if commandWords == "sort":
+        elif commandWords == "sort":
             value = commandStart[0]
             try:
                 dataList.sort()
             except ValueError:
                 continue
 
-        if commandWords == "pop":
+        elif commandWords == "pop":
             value = commandStart[-1]
             try:
                 dataList.pop()
             except ValueError:
                 continue
 
-        if commandWords == "reverse":
+        elif commandWords == "reverse":
             value = commandStart[0]
             try:
                 dataList.reverse()
