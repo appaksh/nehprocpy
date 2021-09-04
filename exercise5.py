@@ -91,7 +91,7 @@ for item in items:
 import re
 from collections import defaultdict
 
-usrInput = "hahahahahah hahahahahaha he he hoooo"
+usrInput = "This is a common message for people, message is private and circulate this with caution "
 wordsList = usrInput.split()
 wordCountDict = {}
 for word in wordsList:
@@ -100,8 +100,9 @@ for word in wordsList:
 
 print(wordCountDict)
 
+# Using collection module defaultdict() factory function.
 
-usrInput = "hahahahahah hahahahahaha he he hoooo"
+usrInput = "This is a common message for people, message is private and circulate this with caution "
 wordsList = usrInput.split()
 wordCountDict = defaultdict(int)
 for word in wordsList:
