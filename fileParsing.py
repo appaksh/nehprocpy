@@ -10,10 +10,6 @@ def parseLine(myLine):
 
 myList = []
 myFile = open("testData.txt", mode="r+")
-try:
-    pass
-except RuntimeError:
-    pass
 lines = myFile.readlines()
 
 for line in lines:
