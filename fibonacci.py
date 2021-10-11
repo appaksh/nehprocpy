@@ -1,12 +1,14 @@
 first = 0
-second: int = 1
-nextNum = first + second
+second = 1
 fib = int(input("How many numbers do you want? "))
+print(first)
+print(second)
 
-for x in range(int(fib)):
+for x in range(int(fib) - 2):
     nextNum = first + second
     first = second
     second = nextNum
     print(nextNum)
 
-print(f'{fib} fibonacci numbers have been printed. ')
+print("--------------------------------------------------------------------------------------------------------------")
+print(f'({fib} fibonacci numbers have been printed.) ')
