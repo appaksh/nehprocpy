@@ -28,7 +28,7 @@ def sendMessage(senderRef, content):
 sbusConnString = "<connection-string-here>"
 queueName = "<Queue name here>"
 dictList = []
-with open("csvSample1.csv", mode="r+") as readCvsLines:
+with open("../csvSample1.csv", mode="r+") as readCvsLines:
     csvDictReader = DictReader(readCvsLines)
     # azureServiceBusClient = ServiceBusClient.from_connection_string(sbusConnString, logging_enable=True)
     # with azureServiceBusClient:

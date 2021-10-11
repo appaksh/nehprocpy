@@ -21,7 +21,7 @@ def parseLine(line):
 
 
 dictList = []
-csvFile = open("csvSample1.csv", mode="r+")
+csvFile = open("../csvSample1.csv", mode="r+")
 csvLines = csvFile.readlines()
 
 for idx in range(1, len(csvLines)):
