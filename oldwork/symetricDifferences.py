@@ -1,0 +1,12 @@
+# https://www.hackerrank.com/challenges/symmetric-difference/problem?h_r=internal-search
+length = int(input())
+arr = map(int, input().split())
+length2 = int(input())
+arr2 = map(int, input().split())
+setArr = set(arr)
+setArr2 = set(arr2)
+fullArr = setArr.union(setArr2)
+sameNums = setArr.intersection(setArr2)
+result = fullArr.difference(sameNums)
+sortedArr = sorted(result)
+print('\n'.join(map(str, sortedArr)))
