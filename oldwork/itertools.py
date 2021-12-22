@@ -8,3 +8,7 @@ def merge_the_tools(string, k):
 
 def permutations():
     return None
+
+
+def repeat(intInp2):
+    return None

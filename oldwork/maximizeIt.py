@@ -14,16 +14,20 @@
 # 206
 
 from itertools import product
-
-K, M = list(map(int, input().split()))
-N = list(map(int, input().split()[1:]) for _ in range(K))
-
-prodN = list(product(*N))
+from itertools import repeat
 
 
-def f1(array):
-    return sum(y ** 2 for y in array) % M
+def dataSum(array, modVar) -> int:
+    return sum(element ** 2 for element in array) % modVar
 
 
-resultArray = list(map(f1, prodN))
+listResult = []
+intInp1, intInp2 = list(map(int, input().split()))
+for repetition in range(intInp1):
+    elementNumProduct = set(map(int, input().split()[1:]))
+    listResult.append(elementNumProduct)
+
+prodN = list(product(*listResult))
+
+resultArray = list(map(dataSum, prodN, repeat(intInp2)))
 print(max(resultArray))
