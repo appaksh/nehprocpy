@@ -2,7 +2,7 @@
 def print_formatted(number):
     width = len("{0:b}".format(number))
     for rep in range(1, number + 1):
-        print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(rep, width=width))
+        print("{0:{fill}{align}{width}d} {0:{fill}{align}{width}o} {0:{fill}{align}{width}X} {0:{fill}{align}{width}b}".format(rep, width=width, fill=' ', align='>'))
 
 
 if __name__ == '__main__':
