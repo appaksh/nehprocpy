@@ -1,0 +1,16 @@
+@startuml
+'https://www.hackerrank.com/challenges/python-lists/problem
+
+start
+:get inputs;
+:get command for insert;
+:get command for print;
+:get command for remove;
+:get command for append;
+:get command for sort;
+:get command for pop;
+:get command for reverse;
+
+stop
+
+@enduml
