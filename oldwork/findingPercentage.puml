@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:repeat for number of students:;
+    :read student name and marks into a dictionary(name:list(marks));
+:read the query name;
+:find person with query name in dictionary(key);
+:get average of values for that person and print float of that((finishing with 2 decimal) points else return None);
+
+stop
+
+@enduml

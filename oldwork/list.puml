@@ -2,14 +2,27 @@
 'https://www.hackerrank.com/challenges/python-lists/problem
 
 start
-:get inputs;
-:get command for insert;
-:get command for print;
-:get command for remove;
-:get command for append;
-:get command for sort;
-:get command for pop;
-:get command for reverse;
+:get command count;
+:initialize new list;
+repeat
+    :get command;
+    switch(command)
+        case (insert)
+            :insert <input> into list;
+        case (print)
+            :print list;
+        case (remove)
+            :remove <input> from list;
+        case (append)
+            :append <input> to list;
+        case (sort)
+            :sort list;
+        case (pop)
+            :pop list;
+        case (reverse)
+           :reverse list;
+    endswitch
+repeat while (n times)
 
 stop
 

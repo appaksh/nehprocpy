@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Get inputs;
+:get divmod of inputs;
+:print *divmod and divmod in a new line;
+
+stop
+
+@enduml
