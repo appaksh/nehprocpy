@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:start with first element;
+:take the length of sub string and take that number of elements from the string;
+:compare the substring and string and if true add 1 to machCount;
+:repeat until end;
+
+stop
+
+@enduml

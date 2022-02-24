@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Read the WHOLE ENTIRE problem;
+:analyze and UNDERSTAND the problem;
+:write how you solve the problem MANUALLY;
+:WRITE sudo code along with the above in plant uml(flowchart);
+:do the code accordingly(to the above) STEP BY STEP;
+:Submit problem's code;
+:push problem to github;
+:dm the teams python group-chat/other about the code you finished in the given process;
+
+stop
+
+@enduml
